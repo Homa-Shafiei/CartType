@@ -22,7 +22,7 @@
             android:layout_height="135dp"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_launcher_background"
-            app:riv_corner_radius="18dp"
+            app:riv_corner_radius="10dp"
             tools:ignore="MissingConstraints" />
 
         <ir.akharinkhabar.card_type.utils.CustomTextView

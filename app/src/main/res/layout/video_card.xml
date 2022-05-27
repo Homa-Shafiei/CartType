@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <com.makeramen.roundedimageview.RoundedImageView
-        android:id="@+id/image"
+        android:id="@+id/videoImage"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:scaleType="centerCrop"
@@ -18,13 +18,13 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:src="@drawable/ic_play"
-        app:layout_constraintBottom_toTopOf="@id/title"
+        app:layout_constraintBottom_toTopOf="@id/videoTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ir.akharinkhabar.card_type.utils.CustomTextView
-        android:id="@+id/title"
+        android:id="@+id/videoTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"

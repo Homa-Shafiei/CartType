@@ -2,7 +2,6 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/cardView"
     android:layout_width="match_parent"
     android:layout_height="220dp"
     android:layout_margin="12dp"
@@ -17,7 +16,7 @@
         android:layout_margin="8dp">
 
         <com.makeramen.roundedimageview.RoundedImageView
-            android:id="@+id/image"
+            android:id="@+id/wideImage"
             android:layout_width="match_parent"
             android:layout_height="135dp"
             android:scaleType="centerCrop"
@@ -26,7 +25,7 @@
             tools:ignore="MissingConstraints" />
 
         <ir.akharinkhabar.card_type.utils.CustomTextView
-            android:id="@+id/title"
+            android:id="@+id/wideTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -35,15 +34,15 @@
             android:text="جلال مقدم؛ آرتیستی که زرنگی کردن بلد نبود و تلف شد!"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/image" />
+            app:layout_constraintTop_toBottomOf="@id/wideImage" />
 
         <ViewFlipper
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/title">
+            app:layout_constraintTop_toBottomOf="@id/wideTitle">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/categoryTime"
+                android:id="@+id/wideCategoryTime"
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
                 android:layout_marginHorizontal="8dp"
@@ -51,7 +50,7 @@
                 tools:ignore="MissingConstraints">
 
                 <ir.akharinkhabar.card_type.utils.CustomTextView
-                    android:id="@+id/category"
+                    android:id="@+id/wideCategory"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="8dp"
@@ -62,7 +61,7 @@
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <ir.akharinkhabar.card_type.utils.CustomTextView
-                    android:id="@+id/dot"
+                    android:id="@+id/wideDot"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -70,23 +69,23 @@
                     android:singleLine="true"
                     android:text="\u2022"
                     android:textSize="11sp"
-                    app:layout_constraintStart_toEndOf="@id/category" />
+                    app:layout_constraintStart_toEndOf="@id/wideCategory" />
 
                 <ir.akharinkhabar.card_type.utils.CustomTextView
-                    android:id="@+id/time"
+                    android:id="@+id/wideTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:singleLine="true"
                     android:text="3 ساعت پیش"
                     android:textSize="11sp"
-                    app:layout_constraintStart_toEndOf="@id/dot" />
+                    app:layout_constraintStart_toEndOf="@id/wideDot" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/icons"
+                android:id="@+id/wideIcons"
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
                 android:layout_marginHorizontal="12dp"
@@ -102,27 +101,27 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/eye"
+                    android:id="@+id/wideEye"
                     android:layout_width="18dp"
                     android:layout_height="18dp"
                     android:layout_marginHorizontal="12dp"
                     android:src="@drawable/ic_eye"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/comment"
+                    app:layout_constraintEnd_toStartOf="@id/wideComment"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/comment"
+                    android:id="@+id/wideComment"
                     android:layout_width="18dp"
                     android:layout_height="18dp"
                     android:layout_marginHorizontal="12dp"
                     android:src="@drawable/ic_chat"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/fav"
+                    app:layout_constraintEnd_toStartOf="@id/wideFav"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/fav"
+                    android:id="@+id/wideFav"
                     android:layout_width="18dp"
                     android:layout_height="18dp"
                     android:src="@drawable/ic_heart"

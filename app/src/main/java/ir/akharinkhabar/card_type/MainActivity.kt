@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.werb.library.MoreAdapter
 import ir.akharinkhabar.card_type.feature.card.adapter.CardViewHolder
@@ -25,15 +26,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setupUi()
+        viewModel.getCardList()
         eventObserver()
     }
 
-    private fun setupUi() {
-        viewModel.getCardList()
-    }
-
     private fun eventObserver() {
+        viewModel.onLoading.observe(this, EventObserver {
+            loadingProgress.isVisible = it
+        })
+
         viewModel.cardList.observe(this, EventObserver {
             if (it.isNotEmpty()) {
                 setCardAdapter()

@@ -9,13 +9,13 @@ data class CardModel(
     @SerializedName("id")
     val id: Int,
     @SerializedName("title")
-    val title: String,
+    val title: String = "",
     @SerializedName("desc")
-    val desc: String,
+    val desc: String = "",
     @SerializedName("publishDateFa")
-    val publishDateFa: String,
+    val publishDateFa: String? = "",
     @SerializedName("categoryName")
-    val categoryName: String,
+    val categoryName: String = "",
     @SerializedName("likeCount")
     val likeCount: Int,
     @SerializedName("commentCount")
@@ -23,5 +23,5 @@ data class CardModel(
     @SerializedName("viewCount")
     val viewCount: Int,
     @SerializedName("thumb")
-    val thumb: String,
-) :Parcelable
+    val thumb: String = "",
+) : Parcelable

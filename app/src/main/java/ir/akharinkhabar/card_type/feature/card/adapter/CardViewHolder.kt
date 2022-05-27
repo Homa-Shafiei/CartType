@@ -26,9 +26,12 @@ class CardViewHolder(values: MutableMap<String, Any>, containerView: View) :
                 simple.category.text = data.simple.categoryName
                 simple.description.text = data.simple.desc
                 simple.time.text = data.simple.publishDateFa
+                simple.likeCount.text = setCount(data.simple.likeCount)
+                simple.commentCount.text = setCount(data.simple.commentCount)
+                simple.viewCount.text = setCount(data.simple.viewCount)
 
                 simple.title.setVisibility(data.simple.title)
-                simple.category.setVisibility(data.simple.categoryName)
+                simple.category.setVisibility(data.simple.categoryName ?: "")
                 simple.description.setVisibility(data.simple.desc)
                 simple.categoryTime.setVisibility(data.simple.publishDateFa ?: "")
                 simple.image.setImageLink(data.simple.thumb)
@@ -41,10 +44,13 @@ class CardViewHolder(values: MutableMap<String, Any>, containerView: View) :
                 wide.wideTitle.text = data.wide.title
                 wide.wideCategory.text = data.wide.categoryName
                 wide.wideTime.text = data.wide.publishDateFa
+                wide.wideLikeCount.text = setCount(data.wide.likeCount)
+                wide.wideCommentCount.text = setCount(data.wide.commentCount)
+                wide.wideViewCount.text = setCount(data.wide.viewCount)
 
                 wide.wideTitle.setVisibility(data.wide.title)
-                wide.wideCategory.setVisibility(data.wide.categoryName)
-                wide.wideCategoryTime.setVisibility(data.wide.publishDateFa ?: "")
+                wide.wideCategory.setVisibility(data.wide.categoryName ?: "")
+                wide.wideCategoryTime.setVisibility(data.wide.categoryName ?: "")
                 wide.wideImage.setImageLink(data.wide.thumb)
             }
 
@@ -64,6 +70,14 @@ class CardViewHolder(values: MutableMap<String, Any>, containerView: View) :
             View.GONE
         } else {
             View.VISIBLE
+        }
+    }
+
+    private fun setCount(number: Int): String {
+        return when {
+            number == 0 -> ""
+            number >= 1000 -> (number / 1000).toString() + " k"
+            else -> number.toString()
         }
     }
 

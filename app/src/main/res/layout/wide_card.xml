@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="220dp"
+    android:layout_height="wrap_content"
     android:layout_margin="12dp"
     android:elevation="1dp"
     app:cardBackgroundColor="@color/surface"
@@ -100,15 +100,33 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
+                <ir.akharinkhabar.card_type.utils.CustomTextView
+                    android:id="@+id/wideViewCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="8dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/wideView"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/wideEye"
+                    android:id="@+id/wideView"
                     android:layout_width="18dp"
                     android:layout_height="18dp"
                     android:layout_marginHorizontal="12dp"
                     android:src="@drawable/ic_eye"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/wideComment"
+                    app:layout_constraintEnd_toStartOf="@id/wideCommentCount"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <ir.akharinkhabar.card_type.utils.CustomTextView
+                    android:id="@+id/wideCommentCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="8dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/wideComment"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/wideComment"
@@ -117,11 +135,20 @@
                     android:layout_marginHorizontal="12dp"
                     android:src="@drawable/ic_chat"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/wideFav"
+                    app:layout_constraintEnd_toStartOf="@id/wideLikeCount"
                     app:layout_constraintTop_toTopOf="parent" />
 
+                <ir.akharinkhabar.card_type.utils.CustomTextView
+                    android:id="@+id/wideLikeCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="8dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/wideLike"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/wideFav"
+                    android:id="@+id/wideLike"
                     android:layout_width="18dp"
                     android:layout_height="18dp"
                     android:src="@drawable/ic_heart"

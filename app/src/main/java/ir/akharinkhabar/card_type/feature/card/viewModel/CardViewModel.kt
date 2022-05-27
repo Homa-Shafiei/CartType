@@ -5,11 +5,11 @@ import androidx.lifecycle.*
 import ir.akharinkhabar.card_type.feature.card.model.CardListResultModel
 import ir.akharinkhabar.card_type.feature.card.repository.CardRepository
 import ir.akharinkhabar.card_type.feature.card.repository.DefaultCardRepository
+import ir.akharinkhabar.card_type.hawk.Cards
 import ir.akharinkhabar.card_type.network.Result
 import ir.akharinkhabar.card_type.utils.Event
 import ir.akharinkhabar.card_type.utils.defaultSavedStateViewModelFactory
 import kotlinx.coroutines.launch
-
 
 class CardViewModel(
     savedState: SavedStateHandle,
@@ -33,10 +33,15 @@ class CardViewModel(
             when (result) {
                 is Result.Error -> {
                     _onLoading.postValue(Event(false))
-                    _onError.postValue(Event(result.error))
+                    if (Cards.get() != null) {
+                        _cardList.postValue(Event(Cards.get()!!))
+                    } else {
+                        _onError.postValue(Event(result.error))
+                    }
                 }
                 is Result.Success -> {
                     _onLoading.postValue(Event(false))
+                    Cards.set(result.data)
                     _cardList.postValue(Event(result.data))
                 }
             }

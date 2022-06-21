@@ -3,9 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Works/AkharinKhabar/AkharinKhabar/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Works/Projects/AkharinKhabar/app/src/main/res/drawable/ic_user_circle.xml" value="0.262037037037037" />
         <entry key="..\:/Works/Projects/AkharinKhabar/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Works/Projects/AkharinKhabar/app/src/main/res/layout/card_list_row.xml" value="0.25416666666666665" />
+        <entry key="..\:/Works/Projects/AkharinKhabar/app/src/main/res/layout/network_image.xml" value="0.25416666666666665" />
+        <entry key="..\:/Works/Projects/AkharinKhabar/app/src/main/res/layout/simple_card.xml" value="0.25416666666666665" />
         <entry key="..\:/Works/Projects/AkharinKhabar/app/src/main/res/layout/toolbar_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Works/Projects/AkharinKhabar/app/src/main/res/layout/video_card.xml" value="0.25416666666666665" />
+        <entry key="..\:/Works/Projects/AkharinKhabar/app/src/main/res/layout/wide_card.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
